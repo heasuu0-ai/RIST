@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products - RIST</title>
+
+    <script src="https://kit.fontawesome.com/f5e8762c40.js" crossorigin="anonymous"></script>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="vendors/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="vendors/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="vendors/favicon/favicon-16x16.png">
+    <link rel="manifest" href="vendors/favicon/site.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="vendors/css/fluid.css">
+    <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="stylesheet" href="resources/css/media-queries.css">
+</head>
+<body>
+
+    <!--------------------- HEADER ------------------------>
+    
+    <header>
+        <div class="row navbar">
+            <div class="col span_1_of_2">
+                <img class="logo" src="resources/img/RIST-logo.png" alt="RIST-logo">
+            </div>
+            <div class="col span_1_of_2">
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Account</a></li>
+                    </ul>
+                </nav>
+                <i class="fa-solid fa-cart-shopping cart_icon"></i>
+                <i class="fa-solid fa-bars menu_icon" onclick="menuToggle()"></i>
+            </div>
+        </div>
+    </header>
+
+    <!--------------------- ACCOUNT ------------------------>
+    
+    <section class="account_page">
+        <div class="row">
+            <div class="col span_1_of_2">
+                <img class="account_image" src="/resources/img/header-image.png" alt="">
+            </div>
+            <div class="col span_1_of_2 form_container">
+                <div class="form_btn">
+                    <span onclick="login()">Login</span>
+                    <span onclick="register()">Register</span>
+                    <hr id="Indicator">
+                </div>
+                <form id="LoginForm">
+                    <input type="text" placeholder="Username">
+                    <input type="text" placeholder="Password">
+                    <button type="password" class="btn">Login</button>
+                    <a href="">Forgot password</a>
+                </form>
+                <form id="RegForm">
+                    <input type="text" placeholder="Username">
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <button type="submit" class="btn">Register</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!--------------------- FOOTER ------------------------>
+    
+    <section class="section footer_section">
+        <div class="row footer">
+            <div class="col span_1_of_4 footer_col_1">
+                <img src="resources/img/RIST-logo-dark.png" alt="brand_image" class="footer_logo">
+                <div>
+                    <h3>RIST Clothing</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, cum</p>
+                </div>
+                </div>
+            <div class="col span_1_of_4 footer_col_2">
+                <h3>Download Our App</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, cum</p>
+                <img src="resources/img/app-logo.png" alt="app_logo" class="app_logo">
+            </div>
+            <div class="col span_1_of_4 footer_col_3">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Account</a></li>
+                </ul>
+            </div>
+            <div class="col span_1_of_4 footer_col_4">
+                <h3>Follow us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Instagram</li>
+                    <li>Twitter</li>
+                    <li>YouTube</li>
+                    <li>Linkedin</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">&copy; 2024 RIST Clothing</p>
+    </section>
+
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = '0px';
+        
+        function menuToggle() {
+            if (MenuItems.style.maxHeight === '0px') {
+                MenuItems.style.maxHeight = '200px';
+            } else {
+                MenuItems.style.maxHeight = '0px';
+            }
+        }
+    </script>
+
+    <script>
+        var LoginForm = document.getElementById("LoginForm");
+        var RegForm = document.getElementById("RegForm");
+        var Indicator = document.getElementById("Indicator");
+
+        function register() {
+            RegForm.style.transform = "translateX(0px)";
+            LoginForm.style.transform = "translateX(0px)";
+            Indicator.style.transform = "translateX(100px)";
+        }
+        function login() {
+            RegForm.style.transform = "translateX(370px)";
+            LoginForm.style.transform = "translateX(370px)";
+            Indicator.style.transform = "translateX(0px)";
+        }
+    </script>
+</body>
+</html>
